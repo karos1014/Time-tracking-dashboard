@@ -1,0 +1,127 @@
+<!DOCtype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <div class="control-panel">
+      <div class="user-info">
+        <img src="./images/image-jeremy.png" alt="user_picture">
+        <div class="report">
+          <p>Report for</p>
+          <p>jeremy robson</p>
+        </div>
+      </div>
+      <div class="time">
+        <ul>
+          <li>daily</li>
+          <li class="active">weekly</li>
+          <li>monthly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cards-container">
+      <div class="card work">
+        <div class="bg">
+          <img src="./images/icon-work.svg" alt="work_icon">
+        </div>
+        <div class="content">
+          <header>
+            <span class="title">work</span>
+            <span class="dots"><img src="./images/icon-ellipsis.svg" alt="dots_icon"></span>
+          </header>
+          <div class="info">
+            <span class="amount-of-time"><span>32</span>hrs</span>
+            <span class="last-week-time">last week - <span>36</span>hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card play">
+        <div class="bg">
+          <img src="./images/icon-play.svg" alt="play_icon">
+        </div>
+        <div class="content">
+          <header>
+            <span class="title">play</span>
+            <span class="dots"><img src="./images/icon-ellipsis.svg" alt="dots_icon"></span>
+          </header>
+          <div class="info">
+            <span class="amount-of-time"><span>10</span>hrs</span>
+            <span class="last-week-time">last week - <span>8</span>hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card study">
+        <div class="bg">
+          <img src="./images/icon-study.svg" alt="study_icon">
+        </div>
+        <div class="content">
+          <header>
+            <span class="title">study</span>
+            <span class="dots"><img src="./images/icon-ellipsis.svg" alt="dots_icon"></span>
+          </header>
+          <div class="info">
+            <span class="amount-of-time"><span>4</span>hrs</span>
+            <span class="last-week-time">last week - <span>7</span>hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card exercise">
+        <div class="bg">
+          <img src="./images/icon-exercise.svg" alt="exercise_icon">
+        </div>
+        <div class="content">
+          <header>
+            <span class="title">exercise</span>
+            <span class="dots"><img src="./images/icon-ellipsis.svg" alt="dots_icon"></span>
+          </header>
+          <div class="info">
+            <span class="amount-of-time"><span>4</span>hrs</span>
+            <span class="last-week-time">last week - <span>5</span>hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card social">
+        <div class="bg">
+          <img src="./images/icon-social.svg" alt="social_icon">
+        </div>
+        <div class="content">
+          <header>
+            <span class="title">social</span>
+            <span class="dots"><img src="./images/icon-ellipsis.svg" alt="dots_icon"></span>
+          </header>
+          <div class="info">
+            <span class="amount-of-time"><span>5</span>hrs</span>
+            <span class="last-week-time">last week - <span>10</span>hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card self-care">
+        <div class="bg">
+          <img src="./images/icon-self-care.svg" alt="self_care_icon">
+        </div>
+        <div class="content">
+          <header>
+            <span class="title">self care</span>
+            <span class="dots"><img src="./images/icon-ellipsis.svg" alt="dots_icon"></span>
+          </header>
+          <div class="info">
+            <span class="amount-of-time"><span>2</span>hrs</span>
+            <span class="last-week-time">last week - <span>2</span>hrs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

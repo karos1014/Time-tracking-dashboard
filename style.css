@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-orange: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange : hsl(43, 84%, 65%);
+    /* ### Neutral */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-block: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.container .control-panel {
+    background-color: var(--Dark-blue);
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+.container .control-panel .user-info {
+    width: 200px;
+    border-radius: 15px;
+    padding: 25px 25px 60px;
+    background-color: var(--Blue);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .control-panel .user-info img {
+    width: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.container .control-panel .user-info .report {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container .control-panel .user-info .report p:first-child {
+    color: var(--Pale-Blue);
+    font-size: 12px;
+}
+
+.container .control-panel .user-info .report p:last-child {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.container .control-panel .time {
+    padding: 10px 25px;
+}
+
+.container .control-panel .time ul li {
+    color: hsla(236, 100%, 87%, .6);
+    text-transform: capitalize;
+    margin-block: 15px;
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.container .control-panel .time ul li.active,
+.container .control-panel .time ul li:hover {
+    color: #fff;
+}
+
+.container .control-panel .time ul li.active {
+    pointer-events: none;
+}
+
+.container .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container .cards-container .card {
+    width: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container .cards-container .card.work {background: linear-gradient(to bottom, var(--Light-orange) 50%, transparent);}
+.container .cards-container .card.play {background: linear-gradient(to bottom, var(--Soft-blue) 50%, transparent);}
+.container .cards-container .card.study {background: linear-gradient(to bottom, var(--Light-red) 50%, transparent);}
+.container .cards-container .card.exercise {background: linear-gradient(to bottom, var(--Lime-green) 50%, transparent);}
+.container .cards-container .card.social {background: linear-gradient(to bottom, var(--Violet) 50%, transparent);}
+.container .cards-container .card.self-care {background: linear-gradient(to bottom, var(--Soft-orange) 50%, transparent);}
+
+.container .cards-container .bg {
+    position: relative;
+}
+
+.container .cards-container .card .bg img {
+    position: absolute;
+    width: 55px;
+    right: 15px;
+    top: -8px;
+}
+
+.container .cards-container .card:nth-child(4) .bg img {
+    top: 2px;
+}
+
+.container .cards-container .card .content {
+    position: relative;
+    background-color: var(--Dark-blue);
+    width: 100%;
+    height: calc(100% - 35px);
+    margin-top: 35px;
+    border-radius: 12px;
+    padding: 22px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container .cards-container .card .content:hover{
+    background-color: hsl(236, 39%, 37%);
+}
+
+.container .cards-container .card .content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .cards-container .card .content header .title {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.container .cards-container .card .content header .dots {
+    display: flex;
+    cursor: pointer;
+    padding-block: 6px;
+    padding-inline: 3px;
+}
+
+.container .cards-container .card .content .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container .cards-container .card .content .info .amount-of-time {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 25px;
+}
+
+.container .cards-container .card .content .info .last-week-time {
+    color: var(--Pale-Blue);
+    text-transform: capitalize;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .container .control-panel {
+        padding: 0;
+    }
+    .container .control-panel .user-info {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .container .control-panel .user-info .report p:last-child {
+        font-size: 20px;
+    }
+    .container .control-panel .time ul {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+    }
+    .container .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .container .control-panel .user-info {
+        gap: 15px;
+    }
+    .container .cards-container .card .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container .cards-container .card .content .info {
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .container .cards-container .card .content .info .amount-of-time {
+        font-size: 26px;
+        margin-top: 0;
+    }
+    .container .control-panel .time ul {
+        justify-content: space-between;
+    }
+    .container .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+    .container .cards-container .card {
+        width: 280px;
+    }
+}
